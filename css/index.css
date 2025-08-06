@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Orbitron:wght@400..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR"
+    , sans-serif;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+header {
+    padding: 32px;
+    /*헤더영역, 로고 및 네비 리스트
+    위치 이동*/
+}
+    img {
+    /*이미지 전체 사이즈
+    스마트폰 사이즈에서 데스크탑 변경*/
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    /*베리티컬 미들 : 인라인 요소
+    또는 테이블 셀 요소(td) 안에서
+    해당 요소의 수직 정렬을 가운데로
+    맞추는 속성. 텍스트나 이미지 수직
+    중앙 정렬.*/
+    }
+    footer {
+    padding: 10px 20px;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.style-logo {
+    display: block;
+    width: 50px;
+    margin-left: auto;  /*가운데 정렬*/
+    margin-right: auto; /*가운데 정렬*/
+}
+.style-nav ul {
+    list-style-type: none;
+}
+.style-nav li {
+    color: #2f322a;
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+
+.hero {
+    background-image: 
+    url(../source/비트펠라하수으\ 멤버들\ 사짅.jpg);
+    background-size:cover;
+    padding:20px 20px 50px 20px;
+    color: #fff;
+    text-shadow: #333 5px 5px 10px;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 23px;
+}
+
+
+h3 {
+     font-size: 16px;
+     font-weight: 400;
+     margin-bottom: 120px;
+}
+
+h4 {
+    font: 16px;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+p {
+    font: 16px;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.button {
+    border: 2px solid #fff;
+    padding: 8px 30px;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.info-box-tan {
+    background-color: lightslategray;
+    color: #fff;
+    padding: 30px 30px 60px;
+    text-align: center;
+}
+
+.info-box-dark {
+    background-color: darkslategray;
+    color: #fff;
+    padding: 30px 30px 60px;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*스마트폰에서 태블릿 변경 시
+float 적용!*/
+
+.col {
+    width: 100%;
+}
+
+.row:before, .row:after {
+    content: "";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+
+/*타블렛 시작*/
+
+@media(min-width:768px) {
+    body {
+        max-width: 778px;
+        /*너비가 768 이상 일때 바디의 최대 너비를
+        778로 제한*/
+    }
+
+    .style-nav ul li {
+        display: inline-block;
+    }
+
+    .style-nav ul {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 90px;
+    }
+
+    h2 {
+        margin-bottom: 16px;
+    }
+
+    .col-md-one-half {
+        width: 50%;
+    }
+
+    .col {
+        float: left;
+        padding: 20px 7px 14px;
+    }
+} 
+
+/*desktop*/
+
+@media(min-width:1024px) {
+    body {
+        max-width: 1200px;
+    }
+
+    .style-logo {
+        float: left;
+    }
+
+    .styl-nav {
+        float: right;
+    }
+
+    .col-lg-one-fourth {
+        width: 25%;
+    }
+}
